@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Page to Palate:A Culinary Collection of Recipes </a>
+
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Recipe</a>
+      <a href="#community" class="w3-bar-item w3-button">P2P Community</a>
+    </div>
+  </div>
+</div>
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Page to Palate</h1>
+  </div>
+</header>
+
+<div class="w3-content" style="max-width:1100px">
+
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <img src="hamburger.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Page to Palate</h1><br>
+      <h5 class="w3-center">Since 2024</h5>
+      <p class="w3-large">"On Page to Palate" is your ultimate online recipe destination, offering a mouthwatering array of dishes for every craving and skill level. From quick weeknight dinners to gourmet delights, our user-friendly platform provides detailed recipes, stunning visuals, and a supportive community to inspire and empower your culinary journey. Join us and savor the joy of cooking, one delicious recipe at a time!</p>
+    </div>
+
+
+    <hr>
+
+    <div class="w3-row w3-padding-64" id="menu">
+      <div class="w3-col l6 w3-padding-large">
+        <h1 class="w3-center">Our Recipes</h1><br>
+
+        <h4><a href="chicken_curry.html">Chicken Curry</a></h4>
+        <p class="w3-text-grey">Succulent chicken simmered in a fragrant blend of spices, coconut milk, and tomatoes, creating a rich and flavorful curry.</p><br>
+
+        <h4><a href="tiramisu.html">Tiramisu</a></h4>
+        <p class="w3-text-grey">Indulgent layers of espresso-soaked ladyfingers and velvety mascarpone cream, dusted with cocoa powder, creating a heavenly Italian dessert.</p><br>
+
+        <h4><a href="kebabs.html">Kebabs</a></h4>
+        <p class="w3-text-grey">Savory Middle Eastern meat patties, traditionally made with ground lamb or beef, mixed with aromatic spices, and shaped into delicate skewers before grilling or frying.</p><br>
+
+        <h4><a href="rissol.html">Rissol</a></h4>
+        <p class="w3-text-grey">Deliciously crispy pastry parcels filled with seasoned meat or seafood, a beloved Portuguese snack.</p><br>
+
+        <h4><a href="roast_chicken.html">Roast Chicken</a></h4>
+        <p class="w3-text-grey">Tender, juicy chicken infused with herbs and roasted to golden perfection, a timeless classic dish.</p>
+      </div>
+
+      <div class="w3-col l6 w3-padding-large">
+        <img src="hamburger.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="w3-row w3-padding-64" id="community">
+      <div class="w3-col l12 w3-padding-large">
+        <h1 class="w3-center">P2P Community</h1><br>
+        <p class="w3-text-grey w3-large">Join our community to share your thoughts, feedback, and recipes with fellow food enthusiasts! You can comment on recipes, ask questions, and rate dishes to help others discover delicious meals.</p>
+
+        <!-- Comment Section -->
+        <div id="comments">
+          <h2>Comments</h2>
+          <div id="commentForm">
+            <textarea id="commentText" rows="4" cols="50" placeholder="Enter your comment"></textarea><br>
+            <button onclick="addComment()">Add Comment</button>
+          </div>
+          <div id="allComments"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Function to add a new comment
+    function addComment() {
+      var commentText = document.getElementById("commentText").value;
+      var commentNode = document.createElement("p");
+      var textNode = document.createTextNode(commentText);
+      commentNode.appendChild(textNode);
+      document.getElementById("allComments").appendChild(commentNode);
+      document.getElementById("commentText").value = ""; // Clear the textarea after adding the comment
+    }
+  </script>
+
+</body>
+</html>
